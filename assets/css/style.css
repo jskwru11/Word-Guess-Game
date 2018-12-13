@@ -1,0 +1,21 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+}
+
+.body-content {
+    margin: 0 auto;
+    border: 5px dotted #fff;
+    width: 200px;
+    height: 500px;
+    margin-top: 30px;
+}
+
+.dotted-box {
+    text-align: center;
+    padding: 20px;
+}

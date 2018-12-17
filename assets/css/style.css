@@ -23,3 +23,7 @@ header {
     text-align: center;
     padding: 20px;
 }
+
+#newGameButton {
+    border: 3px solid orange;
+}

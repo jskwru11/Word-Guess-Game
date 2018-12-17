@@ -2,6 +2,8 @@ body {
     background-color: #000;
     color: rgb(17, 212, 34);
     background-image: url("../images/Marvel_Heroes_Key_Art.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
     font-size: 2em;
 }
 
@@ -12,7 +14,7 @@ header {
 .body-content {
     margin: 0 auto;
     border: 5px dotted #fff;
-    width: 200px;
+    width: max-content;
     height: 500px;
     margin-top: 30px;
 }

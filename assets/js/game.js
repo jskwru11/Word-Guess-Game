@@ -80,6 +80,8 @@ function startGame() {
     document.getElementById("guessCount").innerHTML = remainingGuess;
 
     document.getElementById("myArray").innerHTML = '';
+
+    document.getElementById("winCount").innerHTML = winCount;
     // ranWord(gameWords);
 
 }
@@ -120,8 +122,10 @@ function gameLogic () {
 function ifWin() {
     if (document.getElementById("wordLayout").innerHTML.split(" ").join("") === letters.join("") && remainingGuess >= 1) {
         winCount = winCount + 1;
+        let continueWinCount = winCount
         document.getElementById("winCount").innerHTML = winCount;
         startGame();
+        document.getElementById("winCount").innerHTML = continueWinCount;
         
     } else if (remainingGuess === 0) {
         document.getElementById("messageBanner").innerHTML = "You Lose!!!!";
@@ -151,8 +155,9 @@ document.getElementById("newGameButton").addEventListener('click', buttonClick);
 
 
 function buttonClick() {
+    winCount = 0;
     startGame();
-    console.log(`the button click worked`);
+    document.getElementById("winCount").innerHTML = winCount;
 }
 
 

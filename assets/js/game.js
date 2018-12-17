@@ -133,6 +133,8 @@ function ifWin() {
         if (flag) {
             startGame();
             document.getElementById("messageBanner").innerHTML = "";
+            winCount = 0;
+            document.getElementById("winCount").innerHTML = winCount;
             // ranWord(gameWords);
             // reset();
         }

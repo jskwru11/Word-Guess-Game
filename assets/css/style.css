@@ -15,7 +15,7 @@ header {
     margin: 0 auto;
     border: 5px dotted #fff;
     width: max-content;
-    height: 500px;
+    height: max-content;
     margin-top: 30px;
 }
 
@@ -24,6 +24,7 @@ header {
     padding: 20px;
 }
 
+
 #newGameButton {
-    border: 3px solid orange;
+    background-color: rgb(17, 212, 34);
 }

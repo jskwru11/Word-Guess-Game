@@ -145,6 +145,15 @@ function reset() {
 
 }
 
+// addevent Listener for button click
+
+document.getElementById("newGameButton").addEventListener('click', buttonClick);
+
+
+function buttonClick() {
+    startGame();
+    console.log(`the button click worked`);
+}
 
 
 

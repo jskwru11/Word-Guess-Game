@@ -71,6 +71,12 @@ function startGame() {
     letters = selectedWord.split('');
 
     for (var i=0; i < selectedWord.length; i++) {
+        // if (selectedWord[i] == " ") {
+        //     display[i] = selectedWord[i];
+        //     console.log('we have a space');
+        // } else {
+        //     display[i] = "_ ";
+        // }
         display[i] = "_ ";
         output = output + display[i];
     }
@@ -160,6 +166,7 @@ function buttonClick() {
     winCount = 0;
     startGame();
     document.getElementById("winCount").innerHTML = winCount;
+    document.getElementById("messageBanner").innerHTML = "";
 }
 
 

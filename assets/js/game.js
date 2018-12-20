@@ -3,7 +3,7 @@
 // variables
 
 let lettersArray = [];
-let gameWords = ["thor", "hulk", "antman", "thanos", "drstrange", "ebonyma", "blackwidow", "blackpanther", "captainamerica", "captainmarvel", "spiderman", "ironman"];
+let gameWords = ["thor", "hulk", "antman", "thanos", "dr strange", "ebony ma", "black widow", "black panther", "captain america", "captain marvel", "spiderman", "ironman"];
 // let wordIndex = Math.floor(Math.random() * gameWords.length);
 let wordIndex, selectedWord, wordLength, display, win, letters;
 // let selectedWord = gameWords[wordIndex];
@@ -71,14 +71,15 @@ function startGame() {
     letters = selectedWord.split('');
 
     for (var i=0; i < selectedWord.length; i++) {
-        // if (selectedWord[i] == " ") {
-        //     display[i] = selectedWord[i];
-        //     console.log('we have a space');
-        // } else {
-        //     display[i] = "_ ";
-        // }
-        display[i] = "_ ";
-        output = output + display[i];
+        if (selectedWord[i] === " ") {
+            display[i] = "&nbsp;";
+            output = output + display[i];
+
+        } else {
+            display[i] = "_ ";
+            output = output + display[i];
+        }
+        
     }
     document.getElementById("wordLayout").innerHTML = output;
     //clear output
@@ -126,7 +127,7 @@ function gameLogic () {
 }
 
 function ifWin() {
-    if (document.getElementById("wordLayout").innerHTML.split(" ").join("") === letters.join("") && remainingGuess >= 1) {
+    if (document.getElementById("wordLayout").innerHTML.split(" ").join("").replace('&nbsp;', ' ') === letters.join("") && remainingGuess >= 1) {
         winCount = winCount + 1;
         let continueWinCount = winCount
         document.getElementById("winCount").innerHTML = winCount;
